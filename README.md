@@ -2,7 +2,8 @@ Coffee
 
 
 
-!\[Скриншот](https://github.com/ShamanKis/coffee/blob/main/screenshot.png?raw=true)
+<img width="1877" height="913" alt="screenshot" src="https://github.com/user-attachments/assets/769d6508-589e-4a01-8493-83e399a8abfb" />
+
 
 
 
