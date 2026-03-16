@@ -2,7 +2,7 @@ Coffee
 
 
 
-!\[Скриншот](screenshot.png)
+!\[Скриншот](https://github.com/ShamanKis/coffee/blob/main/screenshot.png)
 
 
 
