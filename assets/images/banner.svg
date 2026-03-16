@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3b2f2a"/>
+      <stop offset="50%" stop-color="#6f4e37"/>
+      <stop offset="100%" stop-color="#a67c52"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <g opacity=".2" fill="#ffffff">
+    <circle cx="260" cy="180" r="120"/>
+    <circle cx="340" cy="200" r="60"/>
+    <circle cx="420" cy="220" r="30"/>
+  </g>
+  <g transform="translate(1100 540) scale(3)" opacity=".85">
+    <path fill="#faf3ea" d="M2 10h20a6 6 0 010 12h-2a8 8 0 01-16 0H2a2 2 0 01-2-2V12a2 2 0 012-2zm5 2v6a6 6 0 0012 0v-6H7z"/>
+  </g>
+  <g transform="translate(120 620)">
+    <text x="0" y="0" font-family="Poppins, Arial" font-weight="800" font-size="72" fill="#faf3ea">Caffè Aroma</text>
+    <text x="2" y="42" font-family="Poppins, Arial" font-weight="400" font-size="24" fill="#f1e7da">Авторский кофе и десерты</text>
+  </g>
+</svg>
+

@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Caffè Aroma — Кофейня</title>
+    <meta name="description" content="Авторский кофе, десерты и уютная атмосфера в центре города.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              coffee: '#6f4e37',
+              latte: '#d3b79a',
+              crema: '#faf3ea'
+            },
+            fontFamily: { sans: ['Poppins', 'ui-sans-serif', 'system-ui'] }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body class="bg-crema text-stone-800">
+    <header class="relative min-h-[88vh] flex items-center">
+      <div class="absolute inset-0 -z-10">
+        <img src="assets/images/banner.svg" alt="Coffee banner" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/40 to-black/20"></div>
+      </div>
+      <nav class="fixed top-0 left-0 right-0 z-20">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+          <a href="#" class="font-extrabold text-xl tracking-wide text-white">Caffè Aroma</a>
+          <div class="hidden md:flex items-center space-x-6">
+            <a href="#menu" class="nav-link">Меню</a>
+            <a href="#gallery" class="nav-link">Галерея</a>
+            <a href="#visit" class="nav-link">Как нас найти</a>
+          </div>
+          <a href="#menu" class="px-4 py-2 rounded-full bg-latte text-coffee font-semibold shadow">Заказать</a>
+        </div>
+      </nav>
+      <div class="max-w-6xl mx-auto px-4 relative z-10">
+        <h1 class="text-5xl md:text-6xl font-extrabold text-white drop-shadow-lg">Твой идеальный <span class="text-latte">кофе</span> — каждый день</h1>
+        <p class="mt-4 text-white/90 text-lg max-w-2xl">Спешелти зерно, ручной обжарки, авторские напитки и десерты. Уют и тепло внутри.</p>
+        <div class="mt-6 flex gap-3">
+          <a href="#menu" class="btn-primary">Смотреть меню</a>
+          <a href="#gallery" class="btn-outline">Атмосфера</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="py-12 bg-white/70">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="flex items-end justify-between mb-4">
+          <h2 class="text-3xl font-extrabold text-coffee">Популярное</h2>
+          <span class="text-stone-600">Новинки сезона</span>
+        </div>
+        <div class="hscroll">
+          <article class="hcard">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?q=80&w=1200&auto=format&fit=crop" alt="Раф апельсиновый">
+            <div class="p-3">
+              <h3 class="font-semibold">Раф апельсиновый</h3>
+              <p class="text-stone-600 text-sm">Нежный кремовый вкус с цитрусом</p>
+            </div>
+          </article>
+          <article class="hcard">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?q=80&w=1200&auto=format&fit=crop" alt="Кофе с корицей">
+            <div class="p-3">
+              <h3 class="font-semibold">Корица латте</h3>
+              <p class="text-stone-600 text-sm">Пряный аромат и мягкий вкус</p>
+            </div>
+          </article>
+          <article class="hcard">
+            <img loading="lazy" src="https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=1200&auto=format&fit=crop" alt="Эспрессо тоник">
+            <div class="p-3">
+              <h3 class="font-semibold">Эспрессо-тоник</h3>
+              <p class="text-stone-600 text-sm">Освежающе и бодряще</p>
+            </div>
+          </article>
+          <article class="hcard">
+            <img loading="lazy" src="assets/images/products/cocoa.svg" alt="Какао на молоке">
+            <div class="p-3">
+              <h3 class="font-semibold">Какао на молоке</h3>
+              <p class="text-stone-600 text-sm">Для уютных вечеров</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu" class="py-16">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="flex items-end justify-between mb-6">
+          <div>
+            <h2 class="text-3xl font-extrabold text-coffee">Меню</h2>
+            <p class="text-stone-600">Выберите категорию и найдите свой вкус</p>
+          </div>
+          <div class="flex gap-2">
+            <button class="chip active" data-filter="all">Все</button>
+            <button class="chip" data-filter="coffee">Кофе</button>
+            <button class="chip" data-filter="tea">Чай</button>
+            <button class="chip" data-filter="dessert">Десерты</button>
+          </div>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="menuGrid">
+          <article class="card" data-category="coffee">
+            <div class="card-img" style="background-image:url('assets/images/products/flatwhite.svg')"></div>
+            <div class="p-4">
+              <h3 class="font-bold text-lg">Флэт уайт</h3>
+              <p class="text-stone-600">Насыщенный эспрессо с шёлковистой пеной</p>
+              <div class="mt-3 flex items-center justify-between">
+                <span class="price">260 ₽</span>
+                <button class="btn-add">В корзину</button>
+              </div>
+            </div>
+          </article>
+          <article class="card" data-category="coffee">
+            <div class="card-img" style="background-image:url('assets/images/products/cappuccino.svg')"></div>
+            <div class="p-4">
+              <h3 class="font-bold text-lg">Капучино</h3>
+              <p class="text-stone-600">Классика с идеальным балансом вкуса</p>
+              <div class="mt-3 flex items-center justify-between">
+                <span class="price">230 ₽</span>
+                <button class="btn-add">В корзину</button>
+              </div>
+            </div>
+          </article>
+          <article class="card" data-category="tea">
+            <div class="card-img" style="background-image:url('assets/images/products/matcha.svg')"></div>
+            <div class="p-4">
+              <h3 class="font-bold text-lg">Матча латте</h3>
+              <p class="text-stone-600">Заряд бодрости и антиоксиданты</p>
+              <div class="mt-3 flex items-center justify-between">
+                <span class="price">280 ₽</span>
+                <button class="btn-add">В корзину</button>
+              </div>
+            </div>
+          </article>
+          <article class="card" data-category="tea">
+            <div class="card-img" style="background-image:url('assets/images/products/oolong.svg')"></div>
+            <div class="p-4">
+              <h3 class="font-bold text-lg">Молочный улун</h3>
+              <p class="text-stone-600">Нежный сливочный вкус</p>
+              <div class="mt-3 flex items-center justify-between">
+                <span class="price">220 ₽</span>
+                <button class="btn-add">В корзину</button>
+              </div>
+            </div>
+          </article>
+          <article class="card" data-category="dessert">
+            <div class="card-img" style="background-image:url('assets/images/products/cheesecake.svg')"></div>
+            <div class="p-4">
+              <h3 class="font-bold text-lg">Чизкейк Нью-Йорк</h3>
+              <p class="text-stone-600">Классика, которая тает во рту</p>
+              <div class="mt-3 flex items-center justify-between">
+                <span class="price">290 ₽</span>
+                <button class="btn-add">В корзину</button>
+              </div>
+            </div>
+          </article>
+          <article class="card" data-category="dessert">
+            <div class="card-img" style="background-image:url('assets/images/products/croissant.svg')"></div>
+            <div class="p-4">
+              <h3 class="font-bold text-lg">Круассан миндальный</h3>
+              <p class="text-stone-600">С хрустящей корочкой и ореховой начинкой</p>
+              <div class="mt-3 flex items-center justify-between">
+                <span class="price">180 ₽</span>
+                <button class="btn-add">В корзину</button>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="mt-8 grid grid-cols-3 gap-6 text-center">
+          <div>
+            <div class="stat" data-count="12000">0</div>
+            <div class="text-stone-500">Чашек в месяц</div>
+          </div>
+          <div>
+            <div class="stat" data-count="3500">0</div>
+            <div class="text-stone-500">Постоянных гостей</div>
+          </div>
+          <div>
+            <div class="stat" data-count="25">0</div>
+            <div class="text-stone-500">Сортов зерна</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="py-16 bg-white">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="mb-6">
+          <h2 class="text-3xl font-extrabold text-coffee">Атмосфера</h2>
+          <p class="text-stone-600">Листайте и открывайте наш мир</p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <a href="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?q=80&w=1400&auto=format&fit=crop" class="glightbox" data-gallery="cafe"><img loading="lazy" class="gal" src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?q=80&w=800&auto=format&fit=crop" alt="Зёрна и чашка"></a>
+          <a href="https://images.unsplash.com/photo-1495774856031-8f21d9f0c2f0?q=80&w=1400&auto=format&fit=crop" class="glightbox" data-gallery="cafe"><img loading="lazy" class="gal" src="https://images.unsplash.com/photo-1495774856031-8f21d9f0c2f0?q=80&w=800&auto=format&fit=crop" alt="Интерьер кофейни"></a>
+          <a href="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1400&auto=format&fit=crop" class="glightbox" data-gallery="cafe"><img loading="lazy" class="gal" src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=800&auto=format&fit=crop" alt="Латте-арт"></a>
+          <a href="https://images.unsplash.com/photo-1432107294469-414527cb5c65?q=80&w=1400&auto=format&fit=crop" class="glightbox" data-gallery="cafe"><img loading="lazy" class="gal" src="https://images.unsplash.com/photo-1432107294469-414527cb5c65?q=80&w=800&auto=format&fit=crop" alt="Бариста за стойкой"></a>
+          <a href="https://images.unsplash.com/photo-1481833761820-0509d3217039?q=80&w=1400&auto=format&fit=crop" class="glightbox" data-gallery="cafe"><img loading="lazy" class="gal" src="https://images.unsplash.com/photo-1481833761820-0509d3217039?q=80&w=800&auto=format&fit=crop" alt="Десерты"></a>
+          <a href="https://images.unsplash.com/photo-1517705008128-361805f42e86?q=80&w=1400&auto=format&fit=crop" class="glightbox" data-gallery="cafe"><img loading="lazy" class="gal" src="https://images.unsplash.com/photo-1517705008128-361805f42e86?q=80&w=800&auto=format&fit=crop" alt="Столик с кофе"></a>
+          <a href="https://images.unsplash.com/photo-1459755486867-b55449bb39ff?q=80&w=1400&auto=format&fit=crop" class="glightbox" data-gallery="cafe"><img loading="lazy" class="gal" src="https://images.unsplash.com/photo-1459755486867-b55449bb39ff?q=80&w=800&auto=format&fit=crop" alt="Эспрессо-машина"></a>
+          <a href="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=1400&auto=format&fit=crop" class="glightbox" data-gallery="cafe"><img loading="lazy" class="gal" src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=800&auto=format&fit=crop" alt="Капучино и круассан"></a>
+          <a href="https://images.unsplash.com/photo-1521017432531-fbd92d0f1121?q=80&w=1400&auto=format&fit=crop" class="glightbox" data-gallery="cafe"><img loading="lazy" class="gal" src="https://images.unsplash.com/photo-1521017432531-fbd92d0f1121?q=80&w=800&auto=format&fit=crop" alt="Турка и зерно"></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="visit" class="py-16">
+      <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h2 class="text-3xl font-extrabold text-coffee mb-2">Заходите в гости</h2>
+          <p class="text-stone-600 mb-4">Ежедневно с 8:00 до 22:00, ул. Ароматная, 7</p>
+          <ul class="space-y-1 text-stone-700">
+            <li>— Возьмите напиток навынос</li>
+            <li>— Купите зерно и аксессуары</li>
+            <li>— Попробуйте наши десерты</li>
+          </ul>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-lg">
+          <div class="map-placeholder" aria-label="Карта отключена для превью"></div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-coffee text-crema">
+      <div class="max-w-6xl mx-auto px-4 py-6 flex items-center justify-between">
+        <span class="text-crema/80 text-sm">© <span id="year"></span> Caffè Aroma</span>
+        <div class="space-x-4">
+          <a href="#" class="hover:underline text-crema/80">Instagram</a>
+          <a href="#" class="hover:underline text-crema/80">VK</a>
+          <a href="#" class="hover:underline text-crema/80">Telegram</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/countup.js@2.8.0/dist/countUp.umd.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
+
